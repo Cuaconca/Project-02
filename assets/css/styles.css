@@ -13,6 +13,8 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+    /* Hide horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 /* Common (Thành phần dùng chung) */
@@ -60,12 +62,22 @@ a {
     height: 100vh;
     background-color: #E6F0FF;
     position: relative;
+    margin-top: -78px;
 }
 
 .navbar {
+    /* background-color: #E6F0FF; */
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar .content {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 .navbar ul {
@@ -101,12 +113,11 @@ a {
 
 /* ======= Hero ======== */
 
-.hero {
-    margin-top: 130px;
-}
-
 .hero .info {
-    width: 51%;
+    width: 559px;
+    position: absolute;
+    margin-top: calc((100vh - 371px)/2);
+    /* transform: translateY(-24%); */
 }
 
 .hero .sub-title {
