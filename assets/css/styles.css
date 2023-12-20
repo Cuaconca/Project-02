@@ -8,6 +8,8 @@
 
 html {
     font-size: 62.5%;
+    /* Thêm hiệu ứng mượt mà khi cuộn tramg | Khi click vào phần navigation cũng cho ra kết quả tương ứng */
+    scroll-behavior: smooth;
 }
 
 body {
