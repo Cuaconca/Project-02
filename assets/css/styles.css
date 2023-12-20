@@ -64,7 +64,7 @@ a {
 }
 
 .header {
-    height: 100vh;
+    height: calc(100vh - 26px);
     background-color: #E6F0FF;
     position: relative;
     margin-top: -78px;
