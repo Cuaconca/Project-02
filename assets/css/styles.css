@@ -58,6 +58,11 @@ a {
 }
 
 /* ======== Header ======== */
+.fixed-header {
+    padding-top: 26px;
+    background-color: #E6F0FF;
+}
+
 .header {
     height: 100vh;
     background-color: #E6F0FF;
@@ -66,7 +71,6 @@ a {
 }
 
 .navbar {
-    /* background-color: #E6F0FF; */
     backdrop-filter: blur(10px);
     position: -webkit-sticky;
     position: sticky;
@@ -720,6 +724,7 @@ a {
 }
 
 .footer .row:nth-child(2) {
+    padding-bottom: 58px;
     margin-top: 81px;
     display: flex;
     align-items: center;
