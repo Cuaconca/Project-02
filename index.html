@@ -80,25 +80,78 @@
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- Navbar -->
-        <div class="fixed-header"></div>
-        <nav class="navbar">
-            <div class="content">
+        <!-- PC header -->
+        <header class="fixed-header"></header>
+
+        <!-- Table/mobile header -->
+        <header class="mobile-header">
+            <input hidden type="checkbox" id="menu-checkbox" class="menu-checkbox">
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Menu content -->
+            <div class="menu-drawer">
                 <!-- Logo -->
                 <a href="/">
-                    <img src="./assets/img/Logo.svg" alt="Bensik." />
+                    <img
+                        class="logo"
+                        src="./assets/img/Logo.svg"
+                        alt="Bensik."
+                    />
                 </a>
 
                 <!-- Navigation -->
-                <ul>
+                <ul id="mobile-nav">
+                    
+                </ul>
+            </div>
+        </header>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="content">
+                <!-- Tablet/mobile Menu -->
+                <label class="toogle-menu" for="menu-checkbox">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            fill="#333"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                        />
+                    </svg>
+                </label>
+
+                <!-- Logo -->
+                <a href="/">
+                    <img
+                        class="logo"
+                        src="./assets/img/Logo.svg"
+                        alt="Bensik."
+                    />
+                </a>
+
+                <!-- Navigation -->
+                <ul id="pc-nav">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#service">Service</a></li>
                     <li><a href="#feature">Features</a></li>
                     <li><a href="#stats">Resources</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="show-on-mobile seperate"><a href="#!">Sign in</a></li>
+                    <li class="show-on-mobile"><a href="#!">Sign up</a></li>
                 </ul>
+
+                <script>
+                    const pcNav = document.getElementById('pc-nav')
+                    const mobileNav = document.getElementById('mobile-nav')
+
+                    mobileNav.innerHTML = pcNav.innerHTML
+                </script>
 
                 <!-- Action -->
                 <div class="actions">
@@ -359,7 +412,7 @@
             <!-- .stats>.content>.row>.img-block>img^.info>h2.sub-title+p.desc -->
             <div class="stats" id="stats">
                 <div class="content">
-                    <div class="row">
+                    <div class="row stats-primary">
                         <div class="img-block">
                             <img
                                 class="image"
@@ -513,7 +566,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row stats-sub">
                         <div class="qty-item">
                             <strong class="qty">2,500</strong>
                             <p class="qty-desc">Homes For Sale</p>
